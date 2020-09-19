@@ -50,7 +50,7 @@ class EventProcessor:
     def weight(self):
         if not self._events:
             return 0
-        histogram = collections.Counter(round(num, 1) for num in self._events)
+        histogram = collections.Counter(round(num, 2) for num in self._events) #show 2 decimal places
         return histogram.most_common(1)[0][0]
 
 
